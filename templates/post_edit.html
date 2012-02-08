@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>Agregar reporte<h1>
+  <form method="POST">
+    <div>
+      Titulo: <input name="title" value="{{post.title}}"/>
+    </div>
+    <div>
+      Contenido:
+      <textarea name="content">{{post.content}}</textarea>
+    </div>
+    <div>
+      Category:
+      <select name="category">
+        <option value="trafico" {% ifequal post.category "trafico" %}selected{% endifequal %}>Trafico</option>
+        <option value="crimen" {% ifequal post.category "crimen" %}selected{% endifequal %}>Crimen</option>
+        <option value="tips" {% ifequal post.category "tips" %}selected{% endifequal %}>Tips</option>
+      </select>
+    </div>
+    <div>
+      <input type="submit"/>
+    </div>
+  </form>
+
+{% endblock %}
+

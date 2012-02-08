@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>Borrar reporte<h1>
+  <h3>Estas seguro de que quieres borrar: {{post.title}}</h3>
+  <form method="POST">
+    <div>
+      <input type="submit"/>
+    </div>
+  </form>
+
+{% endblock %}
+

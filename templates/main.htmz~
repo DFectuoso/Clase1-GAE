@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>Reportes ciudadanos:<h1>
+  <div>
+    <h3>Titulo del reporte</h3>
+    <p>
+      Contenido del reporte
+    </p>
+  </div>
+
+  <a href="/post/add">Agregar un reporte</a>
+{% endblock %}
+

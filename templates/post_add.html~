@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>Agregar reporte<h1>
+  <form method="POST">
+    <div>
+      Titulo: <input name="title"/>
+    </div>
+    <div>
+      Contenido:
+      <textarea name="content"></textarea>
+    </div>
+    <div>
+      <input type="submit"/>
+    </div>
+  </form>
+
+{% endblock %}
+

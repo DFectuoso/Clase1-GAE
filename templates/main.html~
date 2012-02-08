@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!--- TEMP COMMENT OUT CAROUSEL
+
+<div class="carousel">
+	<div class="big_slider">
+		<ul class="big_slider_slides">
+			<li>
+				<h3>hello i am the first header!</h3>
+				<p>and i am some groovy body text.</p>
+			</li>
+			<li>
+				<h3>hello i am the second header!</h3>
+				<p>and i am some more groovy body text.</p>
+			</li>
+			<li>
+				<h3>hello i am the third header!</h3>
+				<p>and i am some more groovy body text.</p>
+			</li>
+			<li>
+				<h3>hello i am the fourth header!</h3>
+				<p>and i am some more groovy body text.</p>
+			</li>
+		</ul>
+	</div>
+	<div class="control_slider">
+		<ul class="control_slider_slides">
+			<li>
+				<p>slide one</p>
+			</li>
+			<li>
+				<p>slide two</p>
+			</li>
+			<li>
+				<p>slide three</p>
+			</li>
+			<li>
+				<p>slide fourteen (just kidding - four)</p>
+			</li>
+		</ul>
+	</div>
+</div>
+-->
+
+<div class="front_page_columns_wrapper">
+
+  {% include "_shout.html" %}
+  
+	<div id="home-faq" class="background-box">
+    <h1>Frequently Asked Questions</h1>
+		<h2>It sounds like magic, how does it work?</h2>
+		<p>
+			After you create a shout, you can invite supporters to a support page. Tell all your friends to help spread the word! Everyone who signs up to support your message will tweet the same message at the same time.
+		</p>
+		<h2>Will everyone send a real tweet or a retweet of my message?</h2>
+		<p>
+			All supporters will send a tweet of the exact same message. Not a retweet.
+		</p>
+		<h2>Will this create a trending topic on Twitter?</h2>
+		<p>
+			Yes. If you have enough supporters it will create a trending topic and help your message spread even further?
+		</p>
+		<h2>Will the application hijack my Twitter account?</h2>
+		<p>
+			We will not use your account for any other purposes other than the specific message you have shouted.
+		</p>
+		<p style="float: right;">
+			<a href="/faq">read more</a> 
+		</p>
+	</div>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+	/* initalize sliders with bxSlider jquery plugin */
+	
+	var big_slider =  $('.big_slider_slides').bxSlider({
+		mode: 'vertical',
+		controls: false
+	});
+	
+	$('.control_slider_slides').bxSlider({
+		mode: 'vertical',
+		displaySlideQty: 3,
+		moveSlideQty: 1,
+		auto: true,
+		pause: 3000,
+		onNextSlide: function(currentSlide, totalSlides){
+			big_slider.goToNextSlide();
+		},
+		onPrevSlide: function(currentSlide, totalSlides){
+			big_slider.goToPreviousSlide();
+		}
+	});
+</script>
+
+{% endblock %}

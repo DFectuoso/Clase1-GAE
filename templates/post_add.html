@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>Agregar reporte<h1>
+  <form method="POST">
+    <div>
+      Titulo: <input name="title"/>
+    </div>
+    <div>
+      Contenido:
+      <textarea name="content"></textarea>
+    </div>
+    <div>
+      Category:
+      <select name="category">
+        <option value="trafico">Trafico</option>
+        <option value="crimen">Crimen</option>
+        <option value="tips">Tips</option>
+      </select>
+    </div>
+    <div>
+      <input type="submit"/>
+    </div>
+  </form>
+
+{% endblock %}
+

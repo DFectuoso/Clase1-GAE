@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>Reportes ciudadanos:<h1>
+  {% for post in posts %}
+    <div>
+      <hr>
+      <h3>{{post.title}}</h3>
+      <p>
+        {{post.content}}
+      </p>
+      <a href="/post/edit/{{post.key}}">Editar</a> |
+      <a href="/post/delete/{{post.key}}">Borrar</a> 
+    </div>
+  {% endfor %}
+
+  <a href="/post/add">Agregar un reporte</a>
+{% endblock %}
+
